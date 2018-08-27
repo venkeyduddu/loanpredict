@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html> 
+ <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+
+    </head>
+    <body>
+	
+	<div class="pf">
+	
+	
+      <form action="/result" method="post">
+      
+        <h1>Loan Prediction</h1>
+        
+        <fieldset>
+          <legend><span class="number">1</span>Persional Details</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name" required>
+          
+          <label>Gender:</label>
+          <input type="radio" id="g1" value="yes" name="gender" checked required><label for="g1" class="light">Male</label><br>
+          <input type="radio" id="g2" value="no" name="gender" ><label for="g2" class="light">FeMale</label>
+          
+          <label>Marital status:</label>
+          <input type="radio" id="m1" value="yes" name="married" checked required><label for="m1" class="light">Married</label><br>
+          <input type="radio" id="m2" value="no" name="married"><label for="m2" class="light">Single</label>
+		  
+		  <label>Applicant Education:</label>
+          <input type="radio" id="ae1" value="yes" name="Education" checked required><label for="ae1" class="light">Graduate</label><br>
+          <input type="radio" id="ae2" value="no" name="Education"><label for="ae2" class="light">Under Graduate</label>
+		 
+		 <label>Self employed:</label>
+         <input type="radio" id="se1" value="yes" name="Self_Employed" checked required><label for="se1" class="light">Yes</label>
+         <input type="radio" id="se2" value="no" name="Self_Employed"><label for="se2" class="light">No</label>
+
+          
+         <label for="dp">Dependents:</label>
+		 <select id="dp" name="Dependents">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3"> 3+</option>          
+         </select>
+		 
+		 <label for="pa">Property_Area:</label>
+		 <select id="pa" name="Property_Area">
+            <option value="Urban">Urban</option>
+            <option value="Semi_Urban">Semi_Urban</option>
+            <option value="Rural">Rural</option>          
+         </select>
+		 
+        </fieldset>
+        
+        <fieldset>
+		<legend><span class="number">2</span>Loan Details</legend>
+		
+		  <label>Applicant have Credit Card:</label>
+          <input type="radio" id="ac1" value="yes" name="credit_history" checked required><label for="ac1" class="light">Yes</label><br>
+          <input type="radio" id="ac2" value="no" name="credit_history" checked required><label for="ac2" class="light">No</label>
+               
+          <label for="ta">Applicant Total Income</label>
+          <input type="text" id="ta" name="Total_Income" required>
+		  
+		  <label for="la">Loan Amount in thousands:</label>
+          <input type="text" id="la" name="LoanAmount" required>
+		  
+		  <label for="lm">Term of loan in months:</label>
+          <input type="text" id="lm" name="Loan_Amount_Term" required>
+        
+        </fieldset>
+        <button type="submit">Predict</button>
+      </form>
+	  	  
+    </div> 
+    </body>
+</html>
