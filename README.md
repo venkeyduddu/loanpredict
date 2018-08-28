@@ -6,4 +6,4 @@ This is Machine Learning app after deployment. for developing this web applicati
 2.	Flask 
 3.	Python Anywhere (Deployment) 
 
-if you want see my web app click on my link : venkeyduddu.pythonanywhere.com
+if you want see my web app click on my link : https://venkeyduddu.pythonanywhere.com
